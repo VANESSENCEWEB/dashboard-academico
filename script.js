@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const disciplinas = ["Programacao", "Engenharia de Software", "Banco de Dados", "Redes", "Design", "Statistica"];
+const disciplinas = ["Programação", "Engenharia de Software", "Banco de Dados", "Redes", "Design", "Estatística"];
 
 const dadosNotas = {
   labels: ["Bimestre 1", "Bimestre 2", "Bimestre 3", "Bimestre 4"],
   datasets: [
     {
-      label: "Programacao",
+      label: "Programação",
       data: [7.5, 8.0, 8.5, 9.0],
       borderColor: "#4BC0C0",
       backgroundColor: "rgba(75, 192, 192, 0.12)",
@@ -51,7 +51,7 @@ const dadosNotas = {
       borderWidth: 2.5
     },
     {
-      label: "Statisticas",
+      label: "Estatísticas",
       data: [9.5, 7.0, 7.5, 9.2],
       borderColor: "#E11D48",
       backgroundColor: "rgba(225, 29, 72, 0.12)",
