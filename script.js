@@ -168,8 +168,10 @@ const corPorFrequencia = (valor) => {
         return `${disciplina} (${percentual}%)`;
     });
 
+    const pieLegendPosition = () => window.innerWidth <= 768 ? "bottom" : "right";
+
     const ctxTempo = document.getElementById("graficoTempo");
-    new Chart(ctxTempo, {
+    const tempoChart = new Chart(ctxTempo, {
         type: "pie",
         data: {
             labels: labelsTempo,
@@ -198,7 +200,7 @@ const corPorFrequencia = (valor) => {
                     font: { size: 16, weight: "bold" }
                 },
                 legend: {
-                    position: "right",
+                    position: pieLegendPosition(),
                     labels: { color: "#cbd5e1", padding: 15 }
                 },
                 tooltip: {
@@ -213,6 +215,35 @@ const corPorFrequencia = (valor) => {
                 }
             }
         }
+    });
+
+    window.addEventListener("resize", () => {
+        const newPos = pieLegendPosition();
+        if (tempoChart.options.plugins.legend.position !== newPos) {
+            tempoChart.options.plugins.legend.position = newPos;
+            tempoChart.update();
+        }
+    });
+
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          } else {
+            entry.target.classList.remove("in-view");
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -12% 0px"
+      }
+    );
+
+    document.querySelectorAll(".section-panel--combined").forEach((section) => {
+      section.classList.add("scroll-reveal");
+      sectionObserver.observe(section);
     });
 
 });
