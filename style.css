@@ -387,6 +387,32 @@ box-shadow: 0 0 20px rgb(21, 235, 75), inset 0 0 15px rgba(0, 255, 65, 0.1);
   display: block;
 }
 
+.section-panel--combined .transition-content,
+.section-panel--combined .chart-frame {
+  will-change: transform, opacity;
+}
+
+.section-panel--combined.scroll-reveal .transition-content,
+.section-panel--combined.scroll-reveal .chart-frame {
+  opacity: 0;
+  transform: translateY(34px) scale(0.98);
+  animation: none !important;
+}
+
+.section-panel--combined.scroll-reveal.in-view .transition-content,
+.section-panel--combined.scroll-reveal.in-view .chart-frame {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.section-panel--combined.scroll-reveal .transition-content {
+  transition: transform 620ms cubic-bezier(0.22, 0.61, 0.36, 1), opacity 620ms ease;
+}
+
+.section-panel--combined.scroll-reveal .chart-frame {
+  transition: transform 760ms cubic-bezier(0.22, 0.61, 0.36, 1) 120ms, opacity 760ms ease 120ms;
+}
+
 
 .transition-bg {
   position: absolute;
@@ -451,6 +477,10 @@ box-shadow: 0 0 20px rgb(21, 235, 75), inset 0 0 15px rgba(0, 255, 65, 0.1);
     min-height: 0 !important;
   }
 
+  #secaoTituloTempo .chart-frame {
+    min-height: 420px !important;
+  }
+
   .transition-title {
     font-size: clamp(1.8rem, 11vw, 2.5rem) !important;
   }
@@ -477,6 +507,53 @@ box-shadow: 0 0 20px rgb(21, 235, 75), inset 0 0 15px rgba(0, 255, 65, 0.1);
 
   .transition-line {
     width: 70vw !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineFlow {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.55;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.55;
+  }
+}
+
+@keyframes notesPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.72;
+    filter: blur(0.6px);
+  }
+}
+
+@keyframes dashboardGridShift {
+  0% {
+    background-position: 0% 0%, 0% 0%, 0% 0%, 0 0, 0 0;
+  }
+  100% {
+    background-position: 0% 0%, 0% 0%, 0% 0%, 50px 50px, 50px 50px;
   }
 }
 
@@ -519,6 +596,13 @@ box-shadow: 0 0 20px rgb(21, 235, 75), inset 0 0 15px rgba(0, 255, 65, 0.1);
   .transition-content,
   .chart-frame {
     animation: none;
+  }
+
+  .section-panel--combined.scroll-reveal .transition-content,
+  .section-panel--combined.scroll-reveal .chart-frame {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
