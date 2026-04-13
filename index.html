@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard Acadêmico</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="android-chrome-icon" sizes="192x192" href="./assets/favicon/android-chrome-192x192.png">
+  <link rel="android-chrome-icon" sizes="512x512" href="./assets/favicon/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+
+
+  <!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <section class="hero">
+<!--
+  <div class="video-container">
+    <video autoplay muted loop playsinline preload="metadata" poster="./assets/video/hero-poster.jpg">
+      <source src="./assets/video/hero-section-video-optimized.mp4" type="video/mp4">
+      <source src="./assets/video/hero-section-video-h264.mp4" type="video/mp4">
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+    <div class="overlay"></div>
+    <div class="gradiente-overlay"></div>
+    </div> -->
+
+
+    <div class="hero-content">
+      <div class="content-wrapper">
+
+  <div class="badge" data-aos="fade-up">
+    <i class="fas fa-sparkles"></i> Programação para Web</div>
+
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">Dashboard <span class="highlight">Acadêmico</span></h1>
+
+            <div class="neon-line"></div>
+
+        <p class="hero-description">Desempenho do Semestre</p>
+          </div>
+           </section>
+           
+
+    <section class="section-panel section-panel--combined" id="sectionTransition">
+      <div class="transition-bg"></div>
+      <div class="panel-content">
+        <div class="transition-content">
+          <img class="title-graph-svg" src="./assets/svg/grafico-de-linha.svg" alt="" aria-hidden="true">
+          <h2 class="transition-title">Grafico de Linha</h2>
+          <div class="transition-line"></div>
+          <p class="transition-subtitle">Evolucao da Nota por Bimestre</p>
+        </div>
+        <div class="chart-frame">
+          <canvas id="graficoNotas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel section-panel--combined" id="secaoTituloFrequencia">
+      <div class="transition-bg"></div>
+      <div class="panel-content">
+        <div class="transition-content">
+          <h2 class="transition-title">Grafico de Barras</h2>
+          <div class="transition-line"></div>
+          <p class="transition-subtitle">Frequencia por Disciplina (%)</p>
+        </div>
+        <div class="chart-frame">
+          <canvas id="graficoFrequencia"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel section-panel--combined" id="secaoTituloTempo">
+      <div class="transition-bg"></div>
+      <div class="panel-content">
+        <div class="transition-content">
+          <h2 class="transition-title">Grafico de Pizza</h2>
+          <div class="transition-line"></div>
+          <p class="transition-subtitle">Distribuicao de Tempo de Estudo</p>
+        </div>
+        <div class="chart-frame">
+          <canvas id="graficoTempo"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODELO REUTILIZAVEL PARA PROXIMAS SECOES -->
+    <!--
+    <section class="section-panel section-panel--combined">
+      <div class="transition-bg"></div>
+      <div class="panel-content">
+        <div class="transition-content">
+          <h2 class="transition-title">Titulo do Grafico</h2>
+          <div class="transition-line"></div>
+          <p class="transition-subtitle">Subtitulo do Grafico</p>
+        </div>
+        <div class="chart-frame">
+          <canvas id="idDoProximoGrafico"></canvas>
+        </div>
+      </div>
+    </section>
+    -->
+
+       
+
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
