@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Dashboard Acadêmico</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Dashboard acadêmico interativo com gráficos de evolução de notas, frequência por disciplina e distribuição de tempo de estudo. Desenvolvido com Chart.js.">
+  <meta name="keywords" content="dashboard acadêmico, chartjs, gráficos, notas, frequência, programação web">
+  <meta name="author" content="Vanessa">
+
+  <!-- Open Graph (WhatsApp, Facebook, LinkedIn, Discord) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dashboard Acadêmico">
+  <meta property="og:description" content="Visualização interativa de desempenho acadêmico — notas, frequência e tempo de estudo por disciplina.">
+  <meta property="og:image" content="https://vanessenceweb.github.io/dashboard-academico/assets/img/screenshot-homepage.avif">
+  <meta property="og:url" content="https://vanessenceweb.github.io/dashboard-academico">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dashboard Acadêmico">
+  <meta name="twitter:description" content="Visualização interativa de desempenho acadêmico — notas, frequência e tempo de estudo por disciplina.">
+  <meta name="twitter:image" content="https://vanessenceweb.github.io/dashboard-academico/assets/img/screenshot-homepage.avif">
+
   <link rel="stylesheet" href="style.css">
 
   <!-- FAVICON -->
@@ -24,16 +44,7 @@
 </head>
 <body>
   <section class="hero">
-<!--
-  <div class="video-container">
-    <video autoplay muted loop playsinline preload="metadata" poster="./assets/video/hero-poster.jpg">
-      <source src="./assets/video/hero-section-video-optimized.mp4" type="video/mp4">
-      <source src="./assets/video/hero-section-video-h264.mp4" type="video/mp4">
-      Seu navegador não suporta a tag de vídeo.
-    </video>
-    <div class="overlay"></div>
-    <div class="gradiente-overlay"></div>
-    </div> -->
+
 
 
     <div class="hero-content">
@@ -55,10 +66,9 @@
       <div class="transition-bg"></div>
       <div class="panel-content">
         <div class="transition-content">
-          <img class="title-graph-svg" src="./assets/svg/grafico-de-linha.svg" alt="" aria-hidden="true">
-          <h2 class="transition-title">Grafico de Linha</h2>
+          <h2 class="transition-title">Gráfico de Linha</h2>
           <div class="transition-line"></div>
-          <p class="transition-subtitle">Evolucao da Nota por Bimestre</p>
+          <p class="transition-subtitle">Evolução da Nota por Bimestre</p>
         </div>
         <div class="chart-frame">
           <canvas id="graficoNotas"></canvas>
@@ -70,9 +80,9 @@
       <div class="transition-bg"></div>
       <div class="panel-content">
         <div class="transition-content">
-          <h2 class="transition-title">Grafico de Barras</h2>
+          <h2 class="transition-title">Gráfico de Barras</h2>
           <div class="transition-line"></div>
-          <p class="transition-subtitle">Frequencia por Disciplina (%)</p>
+          <p class="transition-subtitle">Frequência por Disciplina (%)</p>
         </div>
         <div class="chart-frame">
           <canvas id="graficoFrequencia"></canvas>
@@ -84,9 +94,9 @@
       <div class="transition-bg"></div>
       <div class="panel-content">
         <div class="transition-content">
-          <h2 class="transition-title">Grafico de Pizza</h2>
+          <h2 class="transition-title">Gráfico de Pizza</h2>
           <div class="transition-line"></div>
-          <p class="transition-subtitle">Distribuicao de Tempo de Estudo</p>
+          <p class="transition-subtitle">Distribuição de Tempo de Estudo</p>
         </div>
         <div class="chart-frame">
           <canvas id="graficoTempo"></canvas>
@@ -94,22 +104,7 @@
       </div>
     </section>
 
-    <!-- MODELO REUTILIZAVEL PARA PROXIMAS SECOES -->
-    <!--
-    <section class="section-panel section-panel--combined">
-      <div class="transition-bg"></div>
-      <div class="panel-content">
-        <div class="transition-content">
-          <h2 class="transition-title">Titulo do Grafico</h2>
-          <div class="transition-line"></div>
-          <p class="transition-subtitle">Subtitulo do Grafico</p>
-        </div>
-        <div class="chart-frame">
-          <canvas id="idDoProximoGrafico"></canvas>
-        </div>
-      </div>
-    </section>
-    -->
+  
 
        
 
